@@ -1,0 +1,9 @@
+//Function
+
+int unique(int arr[], int n)
+{
+  intxorsum= 0;
+  for (int i = 0; i < n; i++)
+   xorsum=xorsum^ arr[i];
+  return sum;
+}
