@@ -1,0 +1,36 @@
+int main()
+{
+  int m, n, target;
+  cin >> m >> n >> target;
+  int a[m][n];
+  for (int i = 0; i < m; i++)
+  {
+    for (int j = 0; j < n; j++)
+    {
+      cin >> a[i][j];
+    }
+  }
+
+  int r = 0;
+  int c = n - 1;
+  bool found=false;
+  
+  while (r < n && c>=0){
+    if(a[r][c]==target){
+      found=true;
+    }
+    if(a[r][c]>target){
+      c--;
+    }
+    else
+      r++;
+  }
+
+  if (found)
+  {
+    cout<<"true";
+  }
+  else
+    cout<<"false";
+  
+}
